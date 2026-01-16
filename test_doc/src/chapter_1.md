@@ -24,3 +24,10 @@
 ![](https://upload.wikimedia.org/wikipedia/commons/a/ad/Vincent_van_Gogh_-_The_Church_in_Auvers-sur-Oise%2C_View_from_the_Chevet_-_Google_Art_Project.jpg)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/9/96/Vincent_Willem_van_Gogh_138.jpg)
+
+```rust
+// Some Rust code for testing syntax highlighting
+fn main() {
+    println!("Hello, world!");
+}
+```

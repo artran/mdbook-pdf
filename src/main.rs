@@ -229,21 +229,21 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 
         // Find the theme and click it to change the theme.
         if !cloned_cfg.theme.is_empty() {
-            match tab.find_element(&format!("button.theme#{}", cloned_cfg.theme.to_lowercase())) {
-                Ok(_) => {
-                    tab.evaluate(
-                        &format!(
-                            "document.querySelector('button.theme#{}').click()",
-                            cloned_cfg.theme.to_lowercase()
-                        ),
-                        false,
-                    )?;
+            let theme_name = cloned_cfg.theme.to_lowercase();
+
+            match find_theme_toggle_button(&tab, &theme_name) {
+                Some(selector) => {
+                    let click_button = format!("document.querySelector('{selector}').click()");
+                    tab.evaluate(&click_button, false)?;
                 }
-                Err(_) => println!(
-                    "Unable to find theme {}, return to default one.",
-                    cloned_cfg.theme.to_lowercase()
-                ),
-            };
+                None => {
+                    if cfg!(debug_assertions) {
+                        panic!("Unable to find theme {theme_name}.")
+                    } else {
+                        println!("Unable to find theme {theme_name}, return to default one.")
+                    }
+                }
+            }
         }
 
         // Generate the PDF.
@@ -340,4 +340,19 @@ impl Default for PrintOptions {
             generate_tagged_pdf: true,
         }
     }
+}
+
+/// Try to find the theme toggle button by the theme name with different selector styles.
+fn find_theme_toggle_button(tab: &headless_chrome::Tab, theme_name: &str) -> Option<String> {
+    // First try the new selector style (since mdBook v0.5.0).
+    let selector_new = format!("button.theme#mdbook-theme-{theme_name}");
+    if tab.find_element(&selector_new).is_ok() {
+        return Some(selector_new);
+    }
+    // Fallback to old selector style (for mdBook versions before v0.5.0).
+    let selector_old = format!("button.theme#{theme_name}");
+    if tab.find_element(&selector_old).is_ok() {
+        return Some(selector_old);
+    }
+    None
 }
