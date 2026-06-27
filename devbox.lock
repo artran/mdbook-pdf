@@ -1,0 +1,121 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2026-06-23T00:43:55Z",
+      "resolved": "github:NixOS/nixpkgs/89570f24e97e614aa34aa9ab1c927b6578a43775?lastModified=1782175435&narHash=sha256-EMzXKmnOtBQ2MnvpiNOm7E%2BkOMvdPrIKaeg52Tip2Uk%3D"
+    },
+    "mdbook-pdf-outline@latest": {
+      "last_modified": "2026-06-11T01:27:03Z",
+      "resolved": "github:NixOS/nixpkgs/b503dde361500433ca25a32e8f4d218bf58fb659#mdbook-pdf-outline",
+      "source": "devbox-search",
+      "version": "0.1.6",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/js0gvka82sjkfvq73kcgm29wx4xcih0w-mdbook-pdf-outline-0.1.6",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/j2nzc9pv1aw9digsay6vccwz7n13mh5v-mdbook-pdf-outline-0.1.6-dist"
+            }
+          ],
+          "store_path": "/nix/store/js0gvka82sjkfvq73kcgm29wx4xcih0w-mdbook-pdf-outline-0.1.6"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jr2rp9i8hbb74nz36b32jnpx4rhlyzvz-mdbook-pdf-outline-0.1.6",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/dcivsbqyka9laciqn69kkvvqrsvn5xkv-mdbook-pdf-outline-0.1.6-dist"
+            }
+          ],
+          "store_path": "/nix/store/jr2rp9i8hbb74nz36b32jnpx4rhlyzvz-mdbook-pdf-outline-0.1.6"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/94sgaz3lg0jng06d0nwr9z1gr8v0l4cz-mdbook-pdf-outline-0.1.6",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/pxvhizjj225cfjwk2yzfj6y1wxapn4i5-mdbook-pdf-outline-0.1.6-dist"
+            }
+          ],
+          "store_path": "/nix/store/94sgaz3lg0jng06d0nwr9z1gr8v0l4cz-mdbook-pdf-outline-0.1.6"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k3k3h2zz3fzw0ca2svim9im6wxwqzzfa-mdbook-pdf-outline-0.1.6",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/5ipjj0l9ir60s4laxj102hw5rrzgsvqc-mdbook-pdf-outline-0.1.6-dist"
+            }
+          ],
+          "store_path": "/nix/store/k3k3h2zz3fzw0ca2svim9im6wxwqzzfa-mdbook-pdf-outline-0.1.6"
+        }
+      }
+    },
+    "mdbook@latest": {
+      "last_modified": "2026-05-21T08:15:18Z",
+      "resolved": "github:NixOS/nixpkgs/4a29d733e8a7d5b824c3d8c958a946a9867b3eb2#mdbook",
+      "source": "devbox-search",
+      "version": "0.5.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/89dxh2xb9ps8xsc6j0zsiq9ssl9ylgbh-mdbook-0.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/89dxh2xb9ps8xsc6j0zsiq9ssl9ylgbh-mdbook-0.5.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6kgvc5dhd9624fjlf83z45h2kiw2xq3l-mdbook-0.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/6kgvc5dhd9624fjlf83z45h2kiw2xq3l-mdbook-0.5.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/5sggc32hd1v68gafsp73vn2g675q459h-mdbook-0.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/5sggc32hd1v68gafsp73vn2g675q459h-mdbook-0.5.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/k2wwk3pldndwwqmpsibljcaq16ib7lrb-mdbook-0.5.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/k2wwk3pldndwwqmpsibljcaq16ib7lrb-mdbook-0.5.2"
+        }
+      }
+    }
+  }
+}
