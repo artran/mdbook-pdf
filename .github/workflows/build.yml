@@ -35,11 +35,8 @@ jobs:
           submodules: 'recursive'
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - uses: Swatinem/rust-cache@v2
-      - name: Get latest tag
-        run: |
-          echo "VERSION=$(git -c 'versionsort.suffix=-' ls-remote \
-          --tags --sort='-v:refname' https://github.com/HollowMan6/mdbook-pdf \
-          | cut -d '/' -f3 | head -1)" >> $GITHUB_ENV
+      - name: Get version
+        run: echo "VERSION=${GITHUB_REF_NAME}" >> $GITHUB_ENV
       - name: Add target
         run: |
           rustup target add ${{ matrix.target }}
@@ -76,13 +73,8 @@ jobs:
           submodules: 'recursive'
       - uses: actions-rust-lang/setup-rust-toolchain@v1
       - uses: Swatinem/rust-cache@v2
-      - name: Get latest tag
-        run: |
-          $c = git -c 'versionsort.suffix=-' ls-remote `
-          --tags --sort='-v:refname' https://github.com/HollowMan6/mdbook-pdf `
-          | select -first 1
-          $tag = $c -split "/" | select -last 1
-          echo "VERSION=$tag" >> $env:GITHUB_ENV
+      - name: Get version
+        run: echo "VERSION=$env:GITHUB_REF_NAME" >> $env:GITHUB_ENV
       - name: Add target
         run: |
           rustup target add ${{ matrix.target }}
@@ -118,11 +110,8 @@ jobs:
           submodules: 'recursive'
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-      - name: Get latest tag
-        run: |
-          echo "VERSION=$(git -c 'versionsort.suffix=-' ls-remote \
-          --tags --sort='-v:refname' https://github.com/HollowMan6/mdbook-pdf \
-          | cut --delimiter='/' --fields=3 | head --lines=1)" >> $GITHUB_ENV
+      - name: Get version
+        run: echo "VERSION=${GITHUB_REF_NAME}" >> $GITHUB_ENV
       - name: Build mdbook-pdf Release
         run: |
           mkdir .cargo

@@ -3,7 +3,7 @@
 
 [![last-commit](https://img.shields.io/github/last-commit/artran/mdbook-pdf-chapters)](https://github.com/artran/mdbook-pdf-chapters/graphs/commit-activity)
 [![release-date](https://img.shields.io/github/release-date/artran/mdbook-pdf-chapters)](https://github.com/artran/mdbook-pdf-chapters/releases)
-[![Crate](https://img.shields.io/crates/v/mdbook-pdf.svg)](https://crates.io/crates/mdbook-pdf)
+[![Crate](https://img.shields.io/crates/v/mdbook-pdf-chapters.svg)](https://crates.io/crates/mdbook-pdf-chapters)
 ![mdbook-pdf build](https://github.com/artran/mdbook-pdf-chapters/workflows/mdbook-pdf%20build/badge.svg)
 ![mdbook-pdf test](https://github.com/artran/mdbook-pdf-chapters/workflows/mdbook-pdf%20test/badge.svg)
 ![Python package](https://github.com/artran/mdbook-pdf-chapters/workflows/Python%20package/badge.svg)
@@ -28,11 +28,11 @@ Since it's a plugin (backend) for [mdBook](https://github.com/rust-lang/mdBook),
 
 If your machine's architecture is `x86_64`, or you are using Linux for `ARM64`, check the successful [build GitHub Actions workflows](https://github.com/artran/mdbook-pdf-chapters/actions/workflows/build.yml?query=is%3Asuccess)/[release](https://github.com/artran/mdbook-pdf-chapters/releases), click into the latest one, and then you can get a binary from the Artifacts (including `Windows`, `Linux`, `macOS`).
 
-Otherwise, make sure the [rust compiling environment](https://www.rust-lang.org/tools/install) is available, execute `cargo install mdbook-pdf` to compile and install.
+Otherwise, make sure the [rust compiling environment](https://www.rust-lang.org/tools/install) is available, execute `cargo install mdbook-pdf-chapters` to compile and install.
 
 If you want to compile the latest version, make sure the Rust build environment is available (`cargo build`). Run `cargo install --git https://github.com/artran/mdbook-pdf-chapters.git`, or alternatively, you can clone the repository and compile it yourself. (Run `git clone https://github.com/artran/mdbook-pdf-chapters.git`, in the cloned folder, run `cargo build --release` , get the executable in `target/release/`, and put it in PATH)
 
-For running, please have Google Chrome / Chromium / Microsoft Edge already available (installed at the default location, in PATH or binary location configured). If not, and `mdbook-pdf` has the `fetch` feature enabled (It is not enabled by default, you need to use `cargo install mdbook-pdf --features fetch` to recompile for enabling), the program will try to automatically download the Chromium browser and run it (Note: if you are on Linux, there may be problems if chromium dependencies are not satisfied / using non-x86_64 architectures).
+For running, please have Google Chrome / Chromium / Microsoft Edge already available (installed at the default location, in PATH or binary location configured). If not, and `mdbook-pdf` has the `fetch` feature enabled (It is not enabled by default, you need to use `cargo install mdbook-pdf-chapters --features fetch` to recompile for enabling), the program will try to automatically download the Chromium browser and run it (Note: if you are on Linux, there may be problems if chromium dependencies are not satisfied / using non-x86_64 architectures).
 
 - On Windows 10 and above, the program can generate PDF normally without installing any additional software, because Microsoft Edge is the browser provided with Windows system. Of course, considering the support for the older versions of Windows without Edge, you can install Google Chrome on your computer.
 - In MacOS, you need to install [Google Chrome](https://www.google.com/chrome/) / [Microsoft Edge](https://www.microsoft.com/en-us/edge) or Chromium.

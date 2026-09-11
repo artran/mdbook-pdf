@@ -6,14 +6,18 @@ edition = "2024"
 homepage = "https://hollowmansblog.wordpress.com/2022/01/30/mdbook-pdf-a-mdbook-backend-for-generating-pdf-files/"
 keywords = ["book", "mdbook", "rustbook", "pdf"]
 license = "GPL-3.0"
-name = "mdbook-pdf"
+name = "mdbook-pdf-chapters"
 readme = "README.md"
 repository = "https://github.com/artran/mdbook-pdf-chapters"
-version = "0.1.13"
+version = "0.1.14"
 include = [
     "**/*.rs",
     "Cargo.toml",
 ]
+
+[[bin]]
+name = "mdbook-pdf"
+path = "src/main.rs"
 
 [dependencies]
 env_logger = "0"
