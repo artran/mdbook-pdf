@@ -1,5 +1,5 @@
 [package]
-authors = ["Hollow Man <hollowman@opensuse.org>"]
+authors = ["Hollow Man <hollowman@opensuse.org>", "Ray Tran <ray@artran.co.uk>"]
 categories = ["text-processing", "command-line-interface"]
 description = "A backend for mdBook written in Rust for generating PDF based on headless chrome and Chrome DevTools Protocol"
 edition = "2024"
@@ -8,7 +8,7 @@ keywords = ["book", "mdbook", "rustbook", "pdf"]
 license = "GPL-3.0"
 name = "mdbook-pdf"
 readme = "README.md"
-repository = "https://github.com/HollowMan6/mdbook-pdf"
+repository = "https://github.com/artran/mdbook-pdf-chapters"
 version = "0.1.13"
 include = [
     "**/*.rs",

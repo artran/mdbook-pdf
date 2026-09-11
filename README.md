@@ -1,23 +1,23 @@
 # mdbook-pdf
 [![](https://dockeri.co/image/hollowman6/mdbook-pdf)](https://hub.docker.com/r/hollowman6/mdbook-pdf)
 
-[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/mdbook-pdf)](https://github.com/HollowMan6/mdbook-pdf/graphs/commit-activity)
-[![release-date](https://img.shields.io/github/release-date/HollowMan6/mdbook-pdf)](https://github.com/HollowMan6/mdbook-pdf/releases)
+[![last-commit](https://img.shields.io/github/last-commit/artran/mdbook-pdf-chapters)](https://github.com/artran/mdbook-pdf-chapters/graphs/commit-activity)
+[![release-date](https://img.shields.io/github/release-date/artran/mdbook-pdf-chapters)](https://github.com/artran/mdbook-pdf-chapters/releases)
 [![Crate](https://img.shields.io/crates/v/mdbook-pdf.svg)](https://crates.io/crates/mdbook-pdf)
-![mdbook-pdf build](https://github.com/HollowMan6/mdbook-pdf/workflows/mdbook-pdf%20build/badge.svg)
-![mdbook-pdf test](https://github.com/HollowMan6/mdbook-pdf/workflows/mdbook-pdf%20test/badge.svg)
-![Python package](https://github.com/HollowMan6/mdbook-pdf/workflows/Python%20package/badge.svg)
+![mdbook-pdf build](https://github.com/artran/mdbook-pdf-chapters/workflows/mdbook-pdf%20build/badge.svg)
+![mdbook-pdf test](https://github.com/artran/mdbook-pdf-chapters/workflows/mdbook-pdf%20test/badge.svg)
+![Python package](https://github.com/artran/mdbook-pdf-chapters/workflows/Python%20package/badge.svg)
 
 [![Followers](https://img.shields.io/github/followers/HollowMan6?style=social)](https://github.com/HollowMan6?tab=followers)
-[![watchers](https://img.shields.io/github/watchers/HollowMan6/mdbook-pdf?style=social)](https://github.com/HollowMan6/mdbook-pdf/watchers)
-[![stars](https://img.shields.io/github/stars/HollowMan6/mdbook-pdf?style=social)](https://github.com/HollowMan6/mdbook-pdf/stargazers)
-[![forks](https://img.shields.io/github/forks/HollowMan6/mdbook-pdf?style=social)](https://github.com/HollowMan6/mdbook-pdf/network/members)
+[![watchers](https://img.shields.io/github/watchers/artran/mdbook-pdf-chapters?style=social)](https://github.com/artran/mdbook-pdf-chapters/watchers)
+[![stars](https://img.shields.io/github/stars/artran/mdbook-pdf-chapters?style=social)](https://github.com/artran/mdbook-pdf-chapters/stargazers)
+[![forks](https://img.shields.io/github/forks/artran/mdbook-pdf-chapters?style=social)](https://github.com/artran/mdbook-pdf-chapters/network/members)
 
 [![Open Source Love](https://img.shields.io/badge/-%E2%9D%A4%20Open%20Source-Green?style=flat-square&logo=Github&logoColor=white&link=https://hollowman6.github.io/fund.html)](https://hollowman6.github.io/fund.html)
 [![GPL Licence](https://img.shields.io/badge/license-GPL-blue)](https://opensource.org/licenses/GPL-3.0/)
-[![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/mdbook-pdf.svg)](https://github.com/HollowMan6/mdbook-pdf/archive/master.zip)
+[![Repo-Size](https://img.shields.io/github/repo-size/artran/mdbook-pdf-chapters.svg)](https://github.com/artran/mdbook-pdf-chapters/archive/master.zip)
 
-[中文](https://github.com/HollowMan6/mdbook-pdf/blob/main/README_CN.md)
+[中文](https://github.com/artran/mdbook-pdf-chapters/blob/main/README_CN.md)
 
 [Blog](https://hollowmansblog.wordpress.com/2022/01/30/mdbook-pdf-a-mdbook-backend-for-generating-pdf-files/)
 
@@ -26,11 +26,11 @@ A backend for [mdBook](https://github.com/rust-lang/mdBook) written in Rust for 
 ## Installation & Usage
 Since it's a plugin (backend) for [mdBook](https://github.com/rust-lang/mdBook), first of all you should ensure that `mdbook` is available.
 
-If your machine's architecture is `x86_64`, or you are using Linux for `ARM64`, check the successful [build GitHub Actions workflows](https://github.com/HollowMan6/mdbook-pdf/actions/workflows/build.yml?query=is%3Asuccess)/[release](https://github.com/HollowMan6/mdbook-pdf/releases), click into the latest one, and then you can get a binary from the Artifacts (including `Windows`, `Linux`, `macOS`).
+If your machine's architecture is `x86_64`, or you are using Linux for `ARM64`, check the successful [build GitHub Actions workflows](https://github.com/artran/mdbook-pdf-chapters/actions/workflows/build.yml?query=is%3Asuccess)/[release](https://github.com/artran/mdbook-pdf-chapters/releases), click into the latest one, and then you can get a binary from the Artifacts (including `Windows`, `Linux`, `macOS`).
 
 Otherwise, make sure the [rust compiling environment](https://www.rust-lang.org/tools/install) is available, execute `cargo install mdbook-pdf` to compile and install.
 
-If you want to compile the latest version, make sure the Rust build environment is available (`cargo build`). Run `cargo install --git https://github.com/HollowMan6/mdbook-pdf.git`, or alternatively, you can clone the repository and compile it yourself. (Run `git clone https://github.com/HollowMan6/mdbook-pdf.git`, in the cloned folder, run `cargo build --release` , get the executable in `target/release/`, and put it in PATH)
+If you want to compile the latest version, make sure the Rust build environment is available (`cargo build`). Run `cargo install --git https://github.com/artran/mdbook-pdf-chapters.git`, or alternatively, you can clone the repository and compile it yourself. (Run `git clone https://github.com/artran/mdbook-pdf-chapters.git`, in the cloned folder, run `cargo build --release` , get the executable in `target/release/`, and put it in PATH)
 
 For running, please have Google Chrome / Chromium / Microsoft Edge already available (installed at the default location, in PATH or binary location configured). If not, and `mdbook-pdf` has the `fetch` feature enabled (It is not enabled by default, you need to use `cargo install mdbook-pdf --features fetch` to recompile for enabling), the program will try to automatically download the Chromium browser and run it (Note: if you are on Linux, there may be problems if chromium dependencies are not satisfied / using non-x86_64 architectures).
 
@@ -82,7 +82,7 @@ docker run --rm -v /path/to/book:/book -v ~/.cargo/bin:/mdbook hollowman6/mdbook
 ## Configuration
 Support customize PDF paper orientation, scale of the webpage rendering, paper width and height, page margins, generated PDF page ranges, whether to display header and footer as well as customize their formats, and more.
 
-Check [book.toml](https://github.com/HollowMan6/mdbook-pdf/blob/main/test_doc/book.toml#L10-L39) and comments for details for the available configurations of `[output.pdf]`.
+Check [book.toml](https://github.com/artran/mdbook-pdf-chapters/blob/main/test_doc/book.toml#L10-L39) and comments for details for the available configurations of `[output.pdf]`.
 
 To create one PDF per chapter instead of the full book, enable `per-chapter`. Chapter filenames use the chapter names from `SUMMARY.md`; selection uses source paths from `SUMMARY.md`. If `print-chapters` is set, only those chapters are printed; a chapter in both lists is still printed.
 
@@ -104,7 +104,7 @@ Currently, although Puppeteer supports something similar to [Chrome DevTools Pro
 
 ~~I've already submitted [a PR for mdBook](https://github.com/rust-lang/mdBook/pull/1738) to fix this by making print page (print.html) links link to anchors on the print page, but it's not merged yet. You can try [my PR fork](https://github.com/HollowMan6/mdBook) for this to work.~~ Should be fixed in the latest `mdbook` (v0.5.0+).
 
-If you have relative links that link outside the book, please provide the [static hosting site URL](https://github.com/HollowMan6/mdbook-pdf/blob/main/test_doc/book.toml#L19-L20) for it to get fixed.
+If you have relative links that link outside the book, please provide the [static hosting site URL](https://github.com/artran/mdbook-pdf-chapters/blob/main/test_doc/book.toml#L19-L20) for it to get fixed.
 
 3. ~~Can you add the bookmark to the PDF reflecting the Table of Contents, just like what [wkhtmltopdf](https://wkhtmltopdf.org/) is supported?~~
 
@@ -138,7 +138,7 @@ This has already been realized by Chromium, in `v0.1.11+`, you can control it by
 
 4. Force page breaks in the markdown source that is respected by mdbook-pdf!
 
-Referring to [#9](https://github.com/HollowMan6/mdbook-pdf/discussions/9#discussioncomment-4895678), you can use the following syntax to force page breaks in the markdown source:
+Referring to [#9](https://github.com/artran/mdbook-pdf-chapters/discussions/9#discussioncomment-4895678), you can use the following syntax to force page breaks in the markdown source:
 
 ```markdown
 <div style="page-break-before:always">&nbsp;</div>
@@ -147,7 +147,7 @@ Referring to [#9](https://github.com/HollowMan6/mdbook-pdf/discussions/9#discuss
 
 5. Failed to render my book for PDF in `mdbook-pdf`!
 
-Will appreciate if you can report it to the [issue tracker](https://github.com/HollowMan6/mdbook-pdf/issues/new) providing all the traces for `mdbook-pdf` rendering as well as your `book.toml`. You can also provide the link to your book's repository if it's open source.
+Will appreciate if you can report it to the [issue tracker](https://github.com/artran/mdbook-pdf-chapters/issues/new) providing all the traces for `mdbook-pdf` rendering as well as your `book.toml`. You can also provide the link to your book's repository if it's open source.
 
 ```bash
 RUST_BACKTRACE=full RUST_LOG=trace mdbook build
