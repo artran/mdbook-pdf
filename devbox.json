@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.5/.schema/devbox.schema.json",
+  "packages": [
+    "mdbook@latest",
+    "mdbook-pdf-outline@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Welcome to devbox!' > /dev/null"
+    ],
+    "scripts": {
+      "test": [
+        "cargo test"
+      ]
+    }
+  }
+}

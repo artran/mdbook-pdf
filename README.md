@@ -84,6 +84,17 @@ Support customize PDF paper orientation, scale of the webpage rendering, paper w
 
 Check [book.toml](https://github.com/HollowMan6/mdbook-pdf/blob/main/test_doc/book.toml#L10-L39) and comments for details for the available configurations of `[output.pdf]`.
 
+To create one PDF per chapter instead of the full book, enable `per-chapter`. Chapter filenames use the chapter names from `SUMMARY.md`; selection uses source paths from `SUMMARY.md`. If `print-chapters` is set, only those chapters are printed; a chapter in both lists is still printed.
+
+```toml
+[output.pdf]
+per-chapter = true
+omit-chapters = ["chapter_2.md", "chapter_3.md"]
+print-chapters = ["chapter_3.md"] # printed even though omitted above
+```
+
+Per-chapter PDFs are written to `book/pdf/chapters/`, for example `book/pdf/chapters/01-an-example.pdf`.
+
 ## Common Issues
 1. Support for Firefox in `mdbook-pdf`!
 

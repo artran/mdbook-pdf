@@ -19,6 +19,14 @@ title = "An Example"
 # static_site_url = "https://rust-lang.github.io/mdBook"
 ## Set the theme to be applied for the generated PDF.
 # theme = "ayu"
+## Generate one PDF per selected chapter instead of the full book.
+## CI flips this to true for the per-chapter test runs.
+per-chapter = false
+## Source paths from SUMMARY.md to skip when generating chapter PDFs.
+# omit-chapters = ["chapter_2.md"]
+## Source paths from SUMMARY.md to print when generating chapter PDFs. If set, only these
+## chapters are printed. If a chapter appears in both lists, it will be printed.
+# print-chapters = ["chapter_3.md"]
 ## Check Chrome Devtools Protocol Docs for the explanation of the following params:
 ## https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF
 landscape = false

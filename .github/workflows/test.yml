@@ -19,12 +19,28 @@ jobs:
               name: "An_Example"
               backend-depends: ""
               static-url: ""
+              per-chapter: "false"
             - os: "ubuntu-latest"
               repo: "https://github.com/HollowMan6/mdbook-pdf"
               dir: "test_doc"
               name: "An_Example"
               backend-depends: ""
               static-url: ""
+              per-chapter: "false"
+            - os: "macos-latest"
+              repo: "https://github.com/HollowMan6/mdbook-pdf"
+              dir: "test_doc"
+              name: "An_Example_Per_Chapter"
+              backend-depends: ""
+              static-url: ""
+              per-chapter: "true"
+            - os: "ubuntu-latest"
+              repo: "https://github.com/HollowMan6/mdbook-pdf"
+              dir: "test_doc"
+              name: "An_Example_Per_Chapter"
+              backend-depends: ""
+              static-url: ""
+              per-chapter: "true"
             - os: "macos-latest"
               repo: "https://github.com/rust-lang/cargo"
               dir: "cargo/src/doc"
@@ -248,6 +264,9 @@ jobs:
             echo "generate-document-outline = false" >> book.toml
             echo "[output.pdf-outline]" >> book.toml
           fi
+          if [ "${{ matrix.per-chapter }}" = 'true' ]; then
+            sed -i.bak 's/^per-chapter = false/per-chapter = true/' book.toml
+          fi
           mdbook build
       - name: Upload PDF File to Artifact
         uses: actions/upload-artifact@v6
@@ -256,6 +275,8 @@ jobs:
           path: |
             ${{ matrix.dir }}/book/pdf-outline/*.pdf
             ${{ matrix.dir }}/output/pdf-outline/*.pdf
+            ${{ matrix.dir }}/book/pdf/chapters/*.pdf
+            ${{ matrix.dir }}/output/pdf/chapters/*.pdf
       - name: Upload Build HTML to Artifact
         uses: actions/upload-artifact@v6
         with:
